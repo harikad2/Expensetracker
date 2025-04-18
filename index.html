@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Expense Tracker</h1>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <form id="expense-form">
+      <input type="number" id="amount" placeholder="Amount (₹)" required />
+      <select id="category">
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Entertainment</option>
+        <option>Utilities</option>
+        <option>Others</option>
+      </select>
+      <input type="text" id="description" placeholder="Description" />
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <h2>Expenses</h2>
+    <ul id="expense-list"></ul>
+
+    <h3 id="summary">Total This Month: ₹0</h3>
+    <ul id="category-summary"></ul>
+
+    <canvas id="expenseChart" width="400" height="200"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
